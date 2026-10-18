@@ -1,0 +1,44 @@
+/* ── Kaay Kreat — Global Styles ── */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand colours */
+  --color-bg:       #000000;
+  --color-text:     #F1EEE6;
+  --color-grey-1:   #B7B7B7;
+  --color-grey-2:   #A6A6A6;
+  --color-grey-3:   #777777;
+  --color-border:   #343434;
+  --color-surface:  #222321;
+  --color-sage:     #B7C5A9;
+
+  /* Typography */
+  --font-display: 'Instrument Serif', Instrument Serif;
+  --font-body:    'Oswald', Oswald;
+  --font-mono:    'IBM Plex Mono', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent scroll while preloader is active */
+body.preloader-active {
+  overflow: hidden;
+}

@@ -1,0 +1,73 @@
+# ── Dependencies ─────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# ── Next.js build output ──────────────────────────────────
+.next/
+out/
+
+# ── Production build ──────────────────────────────────────
+build/
+dist/
+
+# ── Environment variables ─────────────────────────────────
+# Never commit secrets or API keys
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+
+# ── TypeScript ────────────────────────────────────────────
+*.tsbuildinfo
+next-env.d.ts
+
+# ── OS generated files ────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── Editor / IDE ──────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ── Logs ──────────────────────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+logs/
+*.log
+
+# ── Package manager locks (keep only one) ─────────────────
+# Keeping package-lock.json (npm). Remove the line below
+# if you switch to yarn or pnpm.
+yarn.lock
+pnpm-lock.yaml
+
+# ── Testing ───────────────────────────────────────────────
+coverage/
+.nyc_output/
+
+# ── Misc ──────────────────────────────────────────────────
+.cache/
+.parcel-cache/
+.turbo/
+.vercel/
+.netlify/

@@ -1,0 +1,129 @@
+/* ── Kaay Kreat Preloader ────────────────────────────────── */
+
+/* Full-screen black overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: #000000;
+  pointer-events: none;
+}
+
+/* ── Hand artwork ────────────────────────────────────────── */
+
+.handLeft,
+.handRight {
+  position: fixed;
+  overflow: visible;
+  pointer-events: none;
+  will-change: transform, opacity;
+  /* isolate so transforms don't affect siblings */
+  isolation: isolate;
+}
+
+/* Left hand — bottom-left, fingers point up-right toward center */
+.handLeft {
+  bottom: -14vh;
+  left: -15vw;
+  width: clamp(520px, 65vw, 980px);
+  aspect-ratio: 1344 / 1152;
+}
+
+/* Right hand — top-right, fingers point down-left toward center */
+.handRight {
+  top: -14vh;
+  right: -15vw;
+  width: clamp(520px, 65vw, 980px);
+  aspect-ratio: 1344 / 896;
+}
+
+.handMetallic {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.handMetallic canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Logo — absolute center ──────────────────────────────── */
+
+.center {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 10;  /* sits above both hands */
+  will-change: transform, opacity;
+}
+
+.logoTravel {
+  position: relative;
+  width: clamp(160px, 14vw, 240px);
+  aspect-ratio: 335 / 305;
+  will-change: transform;
+}
+
+.metallicPaint {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.metallicPaint canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .handLeft {
+    width: clamp(300px, 88vw, 520px);
+    bottom: -8vh;
+    left: -16vw;
+  }
+
+  .handRight {
+    width: clamp(300px, 88vw, 520px);
+    top: -8vh;
+    right: -16vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .handLeft {
+    width: 100vw;
+    bottom: -3vh;
+    left: -24vw;
+  }
+
+  .handRight {
+    width: 100vw;
+    top: -3vh;
+    right: -24vw;
+  }
+
+  .logoTravel {
+    width: min(58vw, 220px);
+  }
+}
+
+/* ── Reduced-motion safety net ───────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .handLeft,
+  .handRight,
+  .center {
+    transition: none !important;
+    animation: none !important;
+  }
+}
