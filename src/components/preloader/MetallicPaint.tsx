@@ -617,7 +617,7 @@ export default function MetallicPaint({
       const s = settingsRef.current;
       const rect = container.getBoundingClientRect();
       const base = s.dpr ?? Math.min(window.devicePixelRatio || 1, 2);
-      let ratio = Math.max(base, 2);
+      let ratio = Math.max(1, Math.min(base, 2));
       const pixels = rect.width * rect.height * ratio * ratio;
       if (pixels > MAX_PIXELS) ratio *= Math.sqrt(MAX_PIXELS / pixels);
       const width = Math.max(1, Math.round(rect.width * ratio));
@@ -708,6 +708,15 @@ export default function MetallicPaint({
 
     const onMove = (event: PointerEvent) => {
       const rect = container.getBoundingClientRect();
+      if (
+        event.clientX < rect.left || event.clientX > rect.right ||
+        event.clientY < rect.top || event.clientY > rect.bottom
+      ) {
+        state.targetX = 0;
+        state.targetY = 0;
+        wake();
+        return;
+      }
       state.targetX = clamp(((event.clientX - rect.left) / rect.width) * 2 - 1, -1.2, 1.2);
       state.targetY = clamp(((event.clientY - rect.top) / rect.height) * 2 - 1, -1.2, 1.2);
       wake();
@@ -738,7 +747,9 @@ export default function MetallicPaint({
     };
 
     canvas.addEventListener('webglcontextlost', onLost);
-    container.addEventListener('pointermove', onMove);
+    // Listen globally so a transparent, pointer-events:none overlay can still
+    // follow the pointer without stealing input from the layer beneath it.
+    window.addEventListener('pointermove', onMove, { passive: true });
     container.addEventListener('pointerleave', onLeave);
 
     engineRef.current = {
@@ -792,7 +803,7 @@ export default function MetallicPaint({
       resizeObserver.disconnect();
       visibility.disconnect();
       canvas.removeEventListener('webglcontextlost', onLost);
-      container.removeEventListener('pointermove', onMove);
+      window.removeEventListener('pointermove', onMove);
       container.removeEventListener('pointerleave', onLeave);
       engineRef.current = null;
       gl.deleteTexture(texture);

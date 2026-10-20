@@ -69,7 +69,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} className={styles.hero} aria-label="Hero">
+    <section ref={heroRef} id="hero-section" className={styles.hero} aria-label="Hero">
 
       {/* ════ NAVIGATION ════ */}
       <nav className={styles.nav} aria-label="Main navigation">
@@ -113,11 +113,11 @@ export default function Hero() {
       {/* ════ ASCII SCULPTURE — full bleed, right-weighted ════ */}
       <div className={styles.asciiWrap} aria-hidden="true">
         <AsciiEffect
-          imageSrc="/images/ascii-source.svg"
-          alt="Abstract flowing digital sculpture"
+          imageSrc="/images/ascii-profile.png"
+          alt="Metallic female profile formed from flowing digital ribbons"
           variant="flow"
-          chars=" .,:;irsXA253hMHGS#9B&@"
-          colors={["#444444", "#888888", "#B8B8B8", "#E0E0E0"]}
+          chars=".,:;irsXA253hMHGS#9B&@"
+          colors={["#55565b", "#898b91", "#c0c1c5", "#f0eee8"]}
           colorMode="gradient"
           backgroundColor="#000000"
           fontSize={8}
@@ -125,36 +125,36 @@ export default function Hero() {
           fontWeight={400}
           lineHeight={1}
           characterSpacing={1}
-          brightnessBoost={2.6}
-          contrast={1.3}
-          threshold={0.05}
+          brightnessBoost={3.1}
+          contrast={1.2}
+          threshold={0.015}
           posterize={28}
           dither="bayer"
-          ditherStrength={0.6}
+          ditherStrength={0.35}
           flowSpeed={0.18}
           flowDirection={8}
           flowStrength={10}
           flowFrequency={0.016}
           mouseRadius={160}
-          mouseStrength={18}
+          mouseStrength={24}
           mouseWaveSpeed={1.0}
           scale={1.2}
           fit="cover"
         />
         <MetallicPaint
-          imageSrc="/images/ascii-source.svg"
-          color="#b4b4ba"
+          imageSrc="/images/ascii-profile.png"
+          color="#d6d3cc"
           backgroundColor="transparent"
           density={1.6}
-          softness={0.6}
+          softness={0.34}
           dispersion={0}
-          distortion={0.05}
-          edgeBend={0.5}
+          distortion={0.025}
+          edgeBend={0.38}
           angle={90}
-          scale={0.6}
-          speed={0.8}
+          scale={0.833}
+          speed={0.38}
           rotation={0}
-          mouseTilt={0}
+          mouseTilt={0.48}
           intro
           className={styles.metallicOverlay}
         />

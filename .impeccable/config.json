@@ -1,0 +1,20 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "space grotesk",
+        "createdAt": "2026-10-20T11:28:14.929Z",
+        "reason": "The existing global font import and site typography intentionally use Space Grotesk."
+      },
+      {
+        "rule": "overused-font",
+        "value": "instrument serif",
+        "createdAt": "2026-10-20T11:28:26.381Z",
+        "reason": "The project declares Instrument Serif as its display face in the existing global typography tokens."
+      }
+    ]
+  }
+}

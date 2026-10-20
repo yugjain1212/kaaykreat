@@ -1,0 +1,1404 @@
+{
+ "url": "http://localhost:3000",
+ "at": "2026-10-20T11:26:52.140Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.56,
+    0.1
+   ],
+   "motion": {
+    "elements": 15,
+    "css": 0,
+    "transitions": 3,
+    "scripted": 12,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 1800,
+     "screens": 2,
+     "words": 77,
+     "img": 1,
+     "video": 0,
+     "canvas": 5,
+     "svg": 0,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "WE MAKE COOL STUFF.",
+     "words": 4,
+     "chars": 19,
+     "lines": 2,
+     "size": 66.2,
+     "vw": 4.6,
+     "font": "Instrument Serif",
+     "weight": 700,
+     "tracking": -0.03,
+     "leading": 0.95,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.28,
+     "top": 381,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "WE MAKE COOL STUFF.",
+     "words": 4,
+     "lines": 2,
+     "size": 66.2,
+     "font": "Instrument Serif"
+    },
+    "headings": [
+     {
+      "text": "WE MAKE COOL STUFF.",
+      "words": 4,
+      "chars": 19,
+      "lines": 2,
+      "size": 66.2,
+      "vw": 4.6,
+      "font": "Instrument Serif",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 0.95,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.28,
+      "top": 381,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Imagine, Create, Launch",
+      "words": 3,
+      "chars": 23,
+      "lines": 2,
+      "size": 103.7,
+      "vw": 7.2,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 0.76,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.54,
+      "top": 1281,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 2,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "IBM Plex Mono",
+       "share": 0.4,
+       "mono": false
+      },
+      {
+       "family": "Poppins",
+       "share": 0.27,
+       "mono": false
+      },
+      {
+       "family": "Instrument Serif",
+       "share": 0.18,
+       "mono": false
+      },
+      {
+       "family": "Oswald",
+       "share": 0.15,
+       "mono": false
+      }
+     ],
+     "familyCount": 4,
+     "sizes": [
+      8,
+      9,
+      10,
+      11,
+      15,
+      17,
+      26,
+      66,
+      104
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 16.6,
+      "leading": 1.65,
+      "weight": 300,
+      "tracking": 0,
+      "contrast": 10.5
+     },
+     "measureChars": 39,
+     "max": {
+      "size": 103.7,
+      "vw": 7.2,
+      "font": "Instrument Serif",
+      "text": "Imagine,"
+     },
+     "monoShare": 0.4,
+     "monoProseShare": 0.4,
+     "monoFamilies": [
+      "IBM Plex Mono"
+     ],
+     "monoSamples": [
+      "KAAY KREAT",
+      "WORK",
+      "SERVICES",
+      "ABOUT",
+      "CONTACT",
+      "HAVE A PROJECT?"
+     ],
+     "microLabels": 4,
+     "microLabelShare": 0.189,
+     "microSamples": [
+      "01",
+      "INDEPENDENT CREATIVE TECHNOLOGY STUDIO",
+      "WEB / AI / DIGITAL PRODUCTS / MOTION",
+      "SCROLL"
+     ],
+     "upperShare": 0.42,
+     "centerShare": 0,
+     "smallText": 5
+    },
+    "eyebrows": [
+     {
+      "text": "01",
+      "above": "WE MAKE COOL STUFF.",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": false,
+      "size": 9.3,
+      "top": 349
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 9.3,
+      "top": 349
+     },
+     {
+      "text": "01 — 04",
+      "size": 8.3,
+      "top": 861
+     }
+    ],
+    "color": {
+     "bodyBg": "#000000",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#000000",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#b7b7b7",
+       "share": 0.29
+      },
+      {
+       "color": "#f1eee6",
+       "share": 0.22
+      },
+      {
+       "color": "#888888",
+       "share": 0.19
+      },
+      {
+       "color": "#444444",
+       "share": 0.12
+      },
+      {
+       "color": "#666666",
+       "share": 0.09
+      }
+     ],
+     "button": {
+      "bg": "#f1eee6",
+      "hsl": {
+       "h": 44,
+       "s": 0.28,
+       "l": 0.92
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 3,
+     "radius": "pill",
+     "height": 39,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 3,
+     "upper": 0,
+     "heroLabels": [
+      "HAVE A PROJECT? ↗",
+      "HAVE A PROJECT? ↗",
+      "EXPLORE OUR WORK ↓"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 5,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 0.85
+     },
+     {
+      "type": "canvas",
+      "ratio": 0.85
+     },
+     {
+      "type": "canvas",
+      "ratio": 0.38
+     },
+     {
+      "type": "canvas",
+      "ratio": 0.28
+     }
+    ],
+    "nav": {
+     "links": 6,
+     "fixed": false,
+     "height": 100,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 1800,
+    "margins": {
+     "left": 115,
+     "right": 0
+    },
+    "sections": [
+     {
+      "sel": "section#hero-section.hero_hero__vlnW3",
+      "tag": "section",
+      "top": 0,
+      "height": 900,
+      "words": 4,
+      "media": 2,
+      "middle": 0,
+      "heading": null,
+      "left": 216,
+      "right": 0,
+      "textLeft": 1338,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.textmorph_section__kwMbs",
+      "tag": "section",
+      "top": 900,
+      "height": 900,
+      "words": 29,
+      "media": 0,
+      "middle": 239,
+      "heading": {
+       "text": "Imagine,",
+       "size": 104,
+       "tag": "h2"
+      },
+      "left": 115,
+      "right": 117,
+      "textLeft": 115,
+      "textRight": 117,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 900,
+      "height": 360
+     }
+    ],
+    "h1s": [],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 115,
+      "n": 2
+     },
+     {
+      "x": 997,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 3,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.01,
+    "voidBox": {
+     "x": 0,
+     "y": 120,
+     "w": 180,
+     "h": 60
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.07,
+    0.14
+   ],
+   "motion": {
+    "elements": 15,
+    "css": 0,
+    "transitions": 3,
+    "scripted": 12,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 2048,
+     "screens": 2,
+     "words": 70,
+     "img": 1,
+     "video": 0,
+     "canvas": 5,
+     "svg": 0,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "WE MAKE COOL STUFF.",
+     "words": 4,
+     "chars": 19,
+     "lines": 2,
+     "size": 38.4,
+     "vw": 5,
+     "font": "Instrument Serif",
+     "weight": 700,
+     "tracking": -0.03,
+     "leading": 0.95,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.31,
+     "top": 467,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "WE MAKE COOL STUFF.",
+     "words": 4,
+     "lines": 2,
+     "size": 38.4,
+     "font": "Instrument Serif"
+    },
+    "headings": [
+     {
+      "text": "WE MAKE COOL STUFF.",
+      "words": 4,
+      "chars": 19,
+      "lines": 2,
+      "size": 38.4,
+      "vw": 5,
+      "font": "Instrument Serif",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 0.95,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.31,
+      "top": 467,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Imagine, Create, Launch",
+      "words": 3,
+      "chars": 23,
+      "lines": 2,
+      "size": 80,
+      "vw": 10.4,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 0.76,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 1392,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 2,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "IBM Plex Mono",
+       "share": 0.34,
+       "mono": false
+      },
+      {
+       "family": "Poppins",
+       "share": 0.29,
+       "mono": false
+      },
+      {
+       "family": "Instrument Serif",
+       "share": 0.2,
+       "mono": false
+      },
+      {
+       "family": "Oswald",
+       "share": 0.17,
+       "mono": false
+      }
+     ],
+     "familyCount": 4,
+     "sizes": [
+      7,
+      8,
+      9,
+      10,
+      13,
+      16,
+      20,
+      38,
+      80
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 16,
+      "leading": 1.65,
+      "weight": 300,
+      "tracking": 0,
+      "contrast": 10.5
+     },
+     "measureChars": 54,
+     "max": {
+      "size": 80,
+      "vw": 10.4,
+      "font": "Instrument Serif",
+      "text": "Imagine,"
+     },
+     "monoShare": 0.34,
+     "monoProseShare": 0.34,
+     "monoFamilies": [
+      "IBM Plex Mono"
+     ],
+     "monoSamples": [
+      "HAVE A PROJECT?",
+      "↗",
+      "01",
+      "INDEPENDENT CREATIVE TECHNOLOGY STUDIO",
+      "HAVE A PROJECT?",
+      "↗"
+     ],
+     "microLabels": 3,
+     "microLabelShare": 0.193,
+     "microSamples": [
+      "01",
+      "INDEPENDENT CREATIVE TECHNOLOGY STUDIO",
+      "WEB / AI / DIGITAL PRODUCTS / MOTION"
+     ],
+     "upperShare": 0.36,
+     "centerShare": 0,
+     "smallText": 6
+    },
+    "eyebrows": [
+     {
+      "text": "01",
+      "above": "WE MAKE COOL STUFF.",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": false,
+      "size": 9.3,
+      "top": 429
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 9.3,
+      "top": 429
+     },
+     {
+      "text": "01 — 04",
+      "size": 8.3,
+      "top": 981
+     }
+    ],
+    "color": {
+     "bodyBg": "#000000",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#000000",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#b7b7b7",
+       "share": 0.32
+      },
+      {
+       "color": "#f1eee6",
+       "share": 0.21
+      },
+      {
+       "color": "#888888",
+       "share": 0.21
+      },
+      {
+       "color": "#444444",
+       "share": 0.11
+      },
+      {
+       "color": "#666666",
+       "share": 0.1
+      }
+     ],
+     "button": {
+      "bg": "#f1eee6",
+      "hsl": {
+       "h": 44,
+       "s": 0.28,
+       "l": 0.92
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 3,
+     "radius": "pill",
+     "height": 39,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 3,
+     "upper": 0,
+     "heroLabels": [
+      "HAVE A PROJECT? ↗",
+      "HAVE A PROJECT? ↗",
+      "EXPLORE OUR WORK ↓"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 4,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "canvas",
+      "ratio": 0.16
+     },
+     {
+      "type": "canvas",
+      "ratio": 0.13
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 78,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 2048,
+    "margins": {
+     "left": 20,
+     "right": 31
+    },
+    "sections": [
+     {
+      "sel": "section#hero-section.hero_hero__vlnW3",
+      "tag": "section",
+      "top": 0,
+      "height": 1024,
+      "words": 26,
+      "media": 2,
+      "middle": 221,
+      "heading": {
+       "text": "WE MAKE",
+       "size": 38,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 31,
+      "textLeft": 20,
+      "textRight": 31,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.textmorph_section__kwMbs",
+      "tag": "section",
+      "top": 1024,
+      "height": 1024,
+      "words": 29,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Imagine,",
+       "size": 80,
+       "tag": "h2"
+      },
+      "left": 54,
+      "right": 181,
+      "textLeft": 54,
+      "textRight": 181,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 1024,
+      "height": 352
+     }
+    ],
+    "h1s": [
+     {
+      "text": "WE MAKE COOL STUFF.",
+      "size": 38,
+      "top": 464,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 2
+     },
+     {
+      "x": 54,
+      "n": 2
+     },
+     {
+      "x": 161,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 5,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.14,
+    0.16
+   ],
+   "motion": {
+    "elements": 15,
+    "css": 0,
+    "transitions": 3,
+    "scripted": 12,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 1620,
+     "screens": 1.9,
+     "words": 63,
+     "img": 1,
+     "video": 0,
+     "canvas": 5,
+     "svg": 0,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "WE MAKE COOL STUFF.",
+     "words": 4,
+     "chars": 19,
+     "lines": 2,
+     "size": 42.9,
+     "vw": 11,
+     "font": "Instrument Serif",
+     "weight": 700,
+     "tracking": -0.03,
+     "leading": 0.93,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.67,
+     "top": 356,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "WE MAKE COOL STUFF.",
+     "words": 4,
+     "lines": 2,
+     "size": 42.9,
+     "font": "Instrument Serif"
+    },
+    "headings": [
+     {
+      "text": "WE MAKE COOL STUFF.",
+      "words": 4,
+      "chars": 19,
+      "lines": 2,
+      "size": 42.9,
+      "vw": 11,
+      "font": "Instrument Serif",
+      "weight": 700,
+      "tracking": -0.03,
+      "leading": 0.93,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.67,
+      "top": 356,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Imagine, Create, Launch",
+      "words": 3,
+      "chars": 23,
+      "lines": 2,
+      "size": 44.9,
+      "vw": 11.5,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 0.79,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 1093,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 2,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 0.31,
+       "mono": false
+      },
+      {
+       "family": "IBM Plex Mono",
+       "share": 0.29,
+       "mono": false
+      },
+      {
+       "family": "Instrument Serif",
+       "share": 0.21,
+       "mono": false
+      },
+      {
+       "family": "Oswald",
+       "share": 0.18,
+       "mono": false
+      }
+     ],
+     "familyCount": 4,
+     "sizes": [
+      7,
+      9,
+      10,
+      13,
+      16,
+      20,
+      43,
+      45
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 16,
+      "leading": 1.65,
+      "weight": 300,
+      "tracking": 0,
+      "contrast": 10.5
+     },
+     "measureChars": 43,
+     "max": {
+      "size": 44.9,
+      "vw": 11.5,
+      "font": "Instrument Serif",
+      "text": "Imagine,"
+     },
+     "monoShare": 0.29,
+     "monoProseShare": 0.29,
+     "monoFamilies": [
+      "IBM Plex Mono"
+     ],
+     "monoSamples": [
+      "01",
+      "INDEPENDENT CREATIVE TECHNOLOGY STUDIO",
+      "HAVE A PROJECT?",
+      "↗",
+      "EXPLORE OUR WORK",
+      "↓"
+     ],
+     "microLabels": 3,
+     "microLabelShare": 0.205,
+     "microSamples": [
+      "01",
+      "INDEPENDENT CREATIVE TECHNOLOGY STUDIO",
+      "WEB / AI / DIGITAL PRODUCTS / MOTION"
+     ],
+     "upperShare": 0.34,
+     "centerShare": 0,
+     "smallText": 5
+    },
+    "eyebrows": [
+     {
+      "text": "01",
+      "above": "WE MAKE COOL STUFF.",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": false,
+      "size": 9.3,
+      "top": 326
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 9.3,
+      "top": 326
+     }
+    ],
+    "color": {
+     "bodyBg": "#000000",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#000000",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#b7b7b7",
+       "share": 0.34
+      },
+      {
+       "color": "#888888",
+       "share": 0.23
+      },
+      {
+       "color": "#f1eee6",
+       "share": 0.18
+      },
+      {
+       "color": "#444444",
+       "share": 0.1
+      },
+      {
+       "color": "#666666",
+       "share": 0.1
+      }
+     ],
+     "button": {
+      "bg": "#f1eee6",
+      "hsl": {
+       "h": 44,
+       "s": 0.28,
+       "l": 0.92
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 39,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 2,
+     "upper": 0,
+     "heroLabels": [
+      "HAVE A PROJECT? ↗",
+      "EXPLORE OUR WORK ↓"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 5,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "canvas",
+      "ratio": 0.28
+     },
+     {
+      "type": "canvas",
+      "ratio": 0.21
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 78,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 1620,
+    "margins": {
+     "left": null,
+     "right": null
+    },
+    "sections": [],
+    "gaps": [],
+    "h1s": [],
+    "edgeText": [],
+    "edges": [],
+    "leftBlocks": 0,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "1 eyebrow/kicker label(s) above headings: \"01\" above \"WE MAKE COOL STUFF.\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "width": 1440,
+   "message": "Monospace type outside code: IBM Plex Mono — e.g. \"KAAY KREAT\", \"WORK\", \"SERVICES\", \"ABOUT\"",
+   "fix": "Set it in the text face. Monospace is for literal code inside <pre>/<code> only.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "width": 1440,
+   "message": "Decorative index numbers: \"01\", \"01 — 04\"",
+   "fix": "Remove them. If order truly matters, write it into the words (\"First, …\") or use a real <ol>.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "4 tiny uppercase letter-spaced labels (e.g. \"01\", \"INDEPENDENT CREATIVE TECHNOLOGY STUDIO\", \"WEB / AI / DIGITAL PRODUCTS / MOTION\", \"SCROLL\").",
+   "fix": "Use sentence-case text at a readable size, or delete the label.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (button #f1eee6, text #f1eee6).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "font-count",
+   "width": 1440,
+   "message": "4 typefaces in use (IBM Plex Mono, Poppins, Instrument Serif, Oswald).",
+   "fix": "Two at most: one display, one text. Often one is enough.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "5 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "late-title",
+   "width": 1440,
+   "message": "The title is not readable 1.2s after the page loaded (it is at 0% opacity).",
+   "fix": "Put the headline in the HTML, painted on the first frame; the load sequence only adds arrival and is settled by 1.2s (references/motion.md, \"Load sequence in 1.2 seconds\"). No preloader, no gate, no waiting for the load event.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The page sits off-centre: its content comes to 115px from the left edge but only to 0px from the right, at 1440px.",
+   "fix": "Give the page one pair of equal margins. Check the wrapper for a max-width without margin-inline: auto, a grid with an empty last column, or padding on one side only. If one side is meant to hold air, it must still be closed by something that reaches the margin (a picture, the navigation's last item, a figure)."
+  },
+  {
+   "level": "FAIL",
+   "id": "no-title",
+   "width": 1440,
+   "message": "The page has no visible h1.",
+   "fix": "Give the first screen a clear title in an h1 that says what this is (a name with what it does, the product with what it is for, the event with its date and place).",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "covered-text",
+   "width": 1440,
+   "message": "Large text lies under another element at some scroll position: \"WE MAKE\" (screen 1, 100% hidden); \"COOL STUFF.\" (screen 1, 100% hidden); \"Imagine,\" (screen 2, 100% hidden); \"Create, Launch\" (screen 2, 100% hidden)",
+   "fix": "Nothing may sit on top of a headline or statement. Move the picture, shorten the pinned run, or raise the text above it (z-index) and give it a ground.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 15 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/yugjain/Desktop/kaaykreat/.taste-skill/inspect/desktop-fold.jpg",
+   "pages": [
+    "/Users/yugjain/Desktop/kaaykreat/.taste-skill/inspect/desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/yugjain/Desktop/kaaykreat/.taste-skill/inspect/tablet-fold.jpg",
+   "pages": [
+    "/Users/yugjain/Desktop/kaaykreat/.taste-skill/inspect/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/yugjain/Desktop/kaaykreat/.taste-skill/inspect/mobile-fold.jpg",
+   "pages": [
+    "/Users/yugjain/Desktop/kaaykreat/.taste-skill/inspect/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

@@ -127,6 +127,15 @@ export function AsciiEffect({
     let glitchUntil = 0
     let glitchBands = new Map<number, number>()
     let loaded = false
+    let fieldDirty = true
+    let sampledColumns = 0
+    let sampledRows = 0
+    let pixels = new Uint8ClampedArray(0)
+    let luminanceField = new Float32Array(0)
+    let isVisible = true
+    const colorPalette = Array.from({ length: chars.length }, (_, index) =>
+      gradientColor(colors, index / Math.max(1, chars.length - 1)),
+    )
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
@@ -135,6 +144,7 @@ export function AsciiEffect({
       const dpr = Math.min(window.devicePixelRatio || 1, 2)
       width = Math.max(1, rect.width)
       height = Math.max(1, rect.height)
+      fieldDirty = true
       canvas.width = Math.round(width * dpr)
       canvas.height = Math.round(height * dpr)
       canvas.style.width = `${width}px`
@@ -163,9 +173,14 @@ export function AsciiEffect({
       pointer.current.x += (pointer.current.targetX - pointer.current.x) * 0.08
       pointer.current.y += (pointer.current.targetY - pointer.current.y) * 0.08
 
-      const cellHeight = Math.max(4, fontSize * Math.max(0.5, lineHeight))
+      let cellHeight = Math.max(4, fontSize * Math.max(0.5, lineHeight))
       context.font = `${fontWeight} ${fontSize}px ${fontFamily}`
-      const cellWidth = Math.max(2, context.measureText("M").width * Math.max(0.5, characterSpacing))
+      let cellWidth = Math.max(2, context.measureText("M").width * Math.max(0.5, characterSpacing))
+      const maxCells = (navigator.hardwareConcurrency || 8) <= 4 ? 30000 : 56000
+      const qualityScale = Math.max(1, Math.sqrt((width * height) / (maxCells * cellWidth * cellHeight)))
+      cellWidth *= qualityScale
+      cellHeight *= qualityScale
+      context.font = `${fontWeight} ${fontSize * qualityScale}px ${fontFamily}`
       const columns = Math.ceil(width / cellWidth) + 2
       const rows = Math.ceil(height / cellHeight) + 2
 
@@ -173,70 +188,75 @@ export function AsciiEffect({
       const directionX = Math.cos(radians)
       const directionY = Math.sin(radians)
 
-      sampleCanvas.width = columns
-      sampleCanvas.height = rows
+      if (fieldDirty || sampledColumns !== columns || sampledRows !== rows) {
+        sampleCanvas.width = columns
+        sampleCanvas.height = rows
 
-      const imageScale = fit === "stretch"
-        ? 1
-        : (fit === "contain"
-            ? Math.min(width / image.naturalWidth, height / image.naturalHeight)
-            : Math.max(width / image.naturalWidth, height / image.naturalHeight)) * Math.max(0.1, scale)
+        const imageScale = fit === "stretch"
+          ? 1
+          : (fit === "contain"
+              ? Math.min(width / image.naturalWidth, height / image.naturalHeight)
+              : Math.max(width / image.naturalWidth, height / image.naturalHeight)) * Math.max(0.1, scale)
 
-      const drawWidth = fit === "stretch" ? columns : image.naturalWidth * imageScale / cellWidth
-      const drawHeight = fit === "stretch" ? rows : image.naturalHeight * imageScale / cellHeight
+        const drawWidth = fit === "stretch" ? columns : image.naturalWidth * imageScale / cellWidth
+        const drawHeight = fit === "stretch" ? rows : image.naturalHeight * imageScale / cellHeight
 
-      sampleContext.clearRect(0, 0, columns, rows)
-      sampleContext.drawImage(
-        image,
-        (columns - drawWidth) / 2,
-        (rows - drawHeight) / 2,
-        drawWidth,
-        drawHeight,
-      )
+        sampleContext.clearRect(0, 0, columns, rows)
+        sampleContext.drawImage(
+          image,
+          (columns - drawWidth) / 2,
+          (rows - drawHeight) / 2,
+          drawWidth,
+          drawHeight,
+        )
 
-      const pixels = sampleContext.getImageData(0, 0, columns, rows).data
-      const steps = Math.max(2, Math.round(posterize))
-      const luminanceField = new Float32Array(columns * rows)
+        pixels = sampleContext.getImageData(0, 0, columns, rows).data
+        const steps = Math.max(2, Math.round(posterize))
+        luminanceField = new Float32Array(columns * rows)
 
-      for (let index = 0; index < luminanceField.length; index++) {
-        const pixel = index * 4
-        const alpha = pixels[pixel + 3]! / 255
-        let luminance = (pixels[pixel]! * 0.2126 + pixels[pixel + 1]! * 0.7152 + pixels[pixel + 2]! * 0.0722) / 255
-        luminance = clamp((luminance - 0.5) * Math.max(0, contrast) + 0.5)
-        luminance = clamp(luminance * brightnessBoost * alpha)
-        luminanceField[index] = luminance <= threshold ? 0 : (luminance - threshold) / Math.max(0.001, 1 - threshold)
-      }
+        for (let index = 0; index < luminanceField.length; index++) {
+          const pixel = index * 4
+          const alpha = pixels[pixel + 3]! / 255
+          let luminance = (pixels[pixel]! * 0.2126 + pixels[pixel + 1]! * 0.7152 + pixels[pixel + 2]! * 0.0722) / 255
+          luminance = clamp((luminance - 0.5) * Math.max(0, contrast) + 0.5)
+          luminance = clamp(luminance * brightnessBoost * alpha)
+          luminanceField[index] = luminance <= threshold ? 0 : (luminance - threshold) / Math.max(0.001, 1 - threshold)
+        }
 
-      if (dither === "floyd-steinberg") {
-        for (let row = 0; row < rows; row++) {
-          for (let column = 0; column < columns; column++) {
-            const index = row * columns + column
-            const oldValue = clamp(luminanceField[index]!)
-            const quantized = Math.round(oldValue * (steps - 1)) / (steps - 1)
-            const value = oldValue + (quantized - oldValue) * clamp(ditherStrength)
-            const error = oldValue - value
-            luminanceField[index] = value
-            if (column + 1 < columns) luminanceField[index + 1]! += error * 7 / 16
-            if (row + 1 < rows) {
-              if (column > 0) luminanceField[index + columns - 1]! += error * 3 / 16
-              luminanceField[index + columns]! += error * 5 / 16
-              if (column + 1 < columns) luminanceField[index + columns + 1]! += error / 16
+        if (dither === "floyd-steinberg") {
+          for (let row = 0; row < rows; row++) {
+            for (let column = 0; column < columns; column++) {
+              const index = row * columns + column
+              const oldValue = clamp(luminanceField[index]!)
+              const quantized = Math.round(oldValue * (steps - 1)) / (steps - 1)
+              const value = oldValue + (quantized - oldValue) * clamp(ditherStrength)
+              const error = oldValue - value
+              luminanceField[index] = value
+              if (column + 1 < columns) luminanceField[index + 1]! += error * 7 / 16
+              if (row + 1 < rows) {
+                if (column > 0) luminanceField[index + columns - 1]! += error * 3 / 16
+                luminanceField[index + columns]! += error * 5 / 16
+                if (column + 1 < columns) luminanceField[index + columns + 1]! += error / 16
+              }
             }
           }
-        }
-      } else if (dither === "bayer") {
-        const matrix = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5]
-        for (let row = 0; row < rows; row++) {
-          for (let column = 0; column < columns; column++) {
-            const index = row * columns + column
-            const offset = (matrix[(row % 4) * 4 + column % 4]! / 16 - 0.5) * clamp(ditherStrength) / 4
-            luminanceField[index] = clamp(luminanceField[index]! + offset)
+        } else if (dither === "bayer") {
+          const matrix = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5]
+          for (let row = 0; row < rows; row++) {
+            for (let column = 0; column < columns; column++) {
+              const index = row * columns + column
+              const offset = (matrix[(row % 4) * 4 + column % 4]! / 16 - 0.5) * clamp(ditherStrength) / 4
+              luminanceField[index] = clamp(luminanceField[index]! + offset)
+            }
+          }
+        } else {
+          for (let index = 0; index < luminanceField.length; index++) {
+            luminanceField[index] = Math.round(clamp(luminanceField[index]!) * (steps - 1)) / (steps - 1)
           }
         }
-      } else {
-        for (let index = 0; index < luminanceField.length; index++) {
-          luminanceField[index] = Math.round(clamp(luminanceField[index]!) * (steps - 1)) / (steps - 1)
-        }
+        sampledColumns = columns
+        sampledRows = rows
+        fieldDirty = false
       }
 
       const reveal = variant === "glitch" && !reduceMotion && revealDuration > 0
@@ -299,7 +319,7 @@ export function AsciiEffect({
 
           context.fillStyle = colorMode === "source"
             ? `rgb(${pixels[pixel]}, ${pixels[pixel + 1]}, ${pixels[pixel + 2]})`
-            : gradientColor(colors, luminance)
+            : colorPalette[Math.min(colorPalette.length - 1, Math.floor(luminance * (colorPalette.length - 1)))]!
 
           context.fillText(character, column * cellWidth - cellWidth + rowOffset, row * cellHeight - cellHeight)
         }
@@ -308,7 +328,7 @@ export function AsciiEffect({
 
     const animate = (now: number) => {
       draw(now)
-      if (!reduceMotion && variant !== "image") frame = requestAnimationFrame(animate)
+      if (isVisible && !reduceMotion && variant !== "image") frame = requestAnimationFrame(animate)
     }
 
     const start = () => {
@@ -316,7 +336,7 @@ export function AsciiEffect({
       loaded = true
       startedAt = performance.now()
       resize()
-      if (!reduceMotion && variant !== "image") frame = requestAnimationFrame(animate)
+      if (isVisible && !reduceMotion && variant !== "image") frame = requestAnimationFrame(animate)
     }
 
     image.onload = start
@@ -325,10 +345,22 @@ export function AsciiEffect({
 
     const observer = new ResizeObserver(resize)
     observer.observe(container)
+    const visibility = new IntersectionObserver((entries) => {
+      isVisible = entries.some((entry) => entry.isIntersecting)
+      if (isVisible && loaded && !reduceMotion && variant !== "image" && !frame) {
+        frame = requestAnimationFrame(animate)
+      }
+      if (!isVisible && frame) {
+        cancelAnimationFrame(frame)
+        frame = 0
+      }
+    })
+    visibility.observe(container)
 
     return () => {
       cancelAnimationFrame(frame)
       observer.disconnect()
+      visibility.disconnect()
       image.onload = null
     }
   }, [backgroundColor, brightnessBoost, characterSpacing, chars, colorMode, colors, contrast, dither, ditherStrength, fit, flowDirection, flowFrequency, flowSpeed, flowStrength, fontFamily, fontSize, fontWeight, glitchFrequency, glitchIntensity, imageSrc, invert, lineHeight, mouseRadius, mouseStrength, mouseWaveSpeed, posterize, revealDuration, scale, threshold, variant])
