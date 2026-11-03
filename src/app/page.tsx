@@ -4,6 +4,7 @@ import Preloader from "@/components/preloader/Preloader";
 import Hero from "@/components/hero/Hero";
 import SmoothScroll from "@/components/smooth-scroll/SmoothScroll";
 import TextMorphSection from "@/components/textmorph/TextMorphSection";
+import ServicesSection from "@/components/services/ServicesSection";
 
 export default function HomePage() {
   return (
@@ -19,6 +20,7 @@ export default function HomePage() {
       >
         <Hero />
         <TextMorphSection />
+        <ServicesSection />
       </main>
     </>
   );

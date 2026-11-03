@@ -1,12 +1,22 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { AsciiEffect } from "@/components/ui/ascii-effect";
 import MetallicPaint from "@/components/preloader/MetallicPaint";
 import styles from "./hero.module.css";
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  const artworkY = useTransform(scrollYProgress, [0, 1], [0, 120]);
+  const artworkScale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
+  const artworkOpacity = useTransform(scrollYProgress, [0, 0.85, 1], [1, 0.72, 0.38]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, -56]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.82, 1], [1, 0.5, 0]);
 
   // Entrance animation — stagger text elements in after preloader
   useEffect(() => {
@@ -93,7 +103,7 @@ export default function Hero() {
           {["WORK", "SERVICES", "ABOUT", "CONTACT"].map((label) => (
             <li key={label}>
               <a
-                href={`/${label.toLowerCase()}`}
+                href={label === "SERVICES" ? "#services" : `/${label.toLowerCase()}`}
                 className={styles.navLink}
               >
                 {label}
@@ -111,7 +121,11 @@ export default function Hero() {
       </nav>
 
       {/* ════ ASCII SCULPTURE — full bleed, right-weighted ════ */}
-      <div className={styles.asciiWrap} aria-hidden="true">
+      <motion.div
+        className={styles.asciiWrap}
+        aria-hidden="true"
+        style={{ y: artworkY, scale: artworkScale, opacity: artworkOpacity }}
+      >
         <AsciiEffect
           imageSrc="/images/ascii-profile.png"
           alt="Metallic female profile formed from flowing digital ribbons"
@@ -158,13 +172,13 @@ export default function Hero() {
           intro
           className={styles.metallicOverlay}
         />
-      </div>
+      </motion.div>
 
       {/* Left-side gradient to keep text legible */}
       <div className={styles.leftFade} aria-hidden="true" />
 
       {/* ════ MAIN CONTENT — left side ════ */}
-      <div className={styles.content}>
+      <motion.div className={styles.content} style={{ y: contentY, opacity: contentOpacity }}>
 
         {/* Technical label */}
         <p className={styles.techLabel} data-reveal>
@@ -176,7 +190,7 @@ export default function Hero() {
         {/* Headline */}
         <h1 className={styles.headline} data-reveal>
           <span className={styles.headlineIvory}>WE MAKE</span>
-          <span className={styles.headlineGrey}>COOL STUFF.</span>
+          <span className={styles.headlineItalic}>COOL STUFF.</span>
         </h1>
 
         {/* Description */}
@@ -193,7 +207,7 @@ export default function Hero() {
             EXPLORE OUR WORK&nbsp;<span aria-hidden="true">↓</span>
           </a>
         </div>
-      </div>
+      </motion.div>
 
       {/* ════ BOTTOM BAR ════ */}
       <div className={styles.bottomBar} aria-hidden="true">

@@ -1,0 +1,1976 @@
+{
+ "url": "http://localhost:3001",
+ "at": "2026-11-03T06:09:30.366Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.54,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 24,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 24,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 5130,
+     "screens": 5.7,
+     "words": 140,
+     "img": 1,
+     "video": 0,
+     "canvas": 6,
+     "svg": 5,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "WE MAKE COOL STUFF.",
+     "words": 4,
+     "chars": 19,
+     "lines": 2,
+     "size": 83.5,
+     "vw": 5.8,
+     "font": "Instrument Serif",
+     "weight": 400,
+     "tracking": -0.02,
+     "leading": 0.93,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.34,
+     "top": 363,
+     "mixedFonts": [
+      "Instrument Serif",
+      "Instrument Serif italic"
+     ],
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "WE MAKE COOL STUFF.",
+     "words": 4,
+     "lines": 2,
+     "size": 83.5,
+     "font": "Instrument Serif"
+    },
+    "headings": [
+     {
+      "text": "WE MAKE COOL STUFF.",
+      "words": 4,
+      "chars": 19,
+      "lines": 2,
+      "size": 83.5,
+      "vw": 5.8,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 0.93,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 363,
+      "mixedFonts": [
+       "Instrument Serif",
+       "Instrument Serif italic"
+      ],
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "WE IMAGINE",
+      "words": 2,
+      "chars": 10,
+      "lines": 2,
+      "size": 112,
+      "vw": 7.8,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 0.83,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.48,
+      "top": 1352,
+      "mixedFonts": [
+       "Instrument Serif",
+       "Instrument Serif italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Every project starts with an obsession.",
+      "words": 6,
+      "chars": 39,
+      "lines": 2,
+      "size": 28.8,
+      "vw": 2,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.3,
+      "top": 1470,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "OUR SERVICES",
+      "words": 2,
+      "chars": 12,
+      "lines": 2,
+      "size": 89.3,
+      "vw": 6.2,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 0.82,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.26,
+      "top": 4616,
+      "mixedFonts": [
+       "Instrument Serif",
+       "Instrument Serif italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 3
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Instrument Sans",
+       "share": 0.78,
+       "mono": false
+      },
+      {
+       "family": "Space Mono",
+       "share": 0.13,
+       "mono": false
+      },
+      {
+       "family": "Instrument Serif",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      7,
+      8,
+      10,
+      11,
+      13,
+      15,
+      16,
+      17,
+      19,
+      24,
+      29,
+      84,
+      89,
+      112
+     ],
+     "sizeCount": 14,
+     "notLoaded": [],
+     "body": {
+      "font": "Instrument Sans",
+      "size": 19.4,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": null
+     },
+     "measureChars": 44,
+     "max": {
+      "size": 112,
+      "vw": 7.8,
+      "font": "Instrument Serif",
+      "text": "WE"
+     },
+     "monoShare": 0.13,
+     "monoProseShare": 0.13,
+     "monoFamilies": [
+      "Space Mono"
+     ],
+     "monoSamples": [
+      "01",
+      "INDEPENDENT CREATIVE TECHNOLOGY STUDIO",
+      "WEB / AI / DIGITAL PRODUCTS / MOTION",
+      "01 — 04",
+      "SCROLL",
+      "What we do"
+     ],
+     "microLabels": 5,
+     "microLabelShare": 0.108,
+     "microSamples": [
+      "01",
+      "INDEPENDENT CREATIVE TECHNOLOGY STUDIO",
+      "WEB / AI / DIGITAL PRODUCTS / MOTION",
+      "SCROLL",
+      "What we do"
+     ],
+     "upperShare": 0.36,
+     "centerShare": 0,
+     "smallText": 6
+    },
+    "eyebrows": [
+     {
+      "text": "01",
+      "above": "WE MAKE COOL STUFF.",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": false,
+      "size": 9.6,
+      "top": 331
+     },
+     {
+      "text": "What we do",
+      "above": "OUR SERVICES",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": false,
+      "size": 10.9,
+      "top": 4554
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 9.6,
+      "top": 331
+     },
+     {
+      "text": "01 — 04",
+      "size": 8.3,
+      "top": 861
+     },
+     {
+      "text": "01",
+      "size": 10.6,
+      "top": 4462
+     },
+     {
+      "text": "02",
+      "size": 10.6,
+      "top": 4490
+     },
+     {
+      "text": "03",
+      "size": 10.6,
+      "top": 4804
+     },
+     {
+      "text": "04",
+      "size": 10.6,
+      "top": 4832
+     }
+    ],
+    "color": {
+     "bodyBg": "#000000",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#000000",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      },
+      {
+       "color": "#050505",
+       "top": 900,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.02
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#b7b5af",
+       "share": 0.28
+      },
+      {
+       "color": "#c4c2bc",
+       "share": 0.22
+      },
+      {
+       "color": "#f1eee6",
+       "share": 0.2
+      },
+      {
+       "color": "#888888",
+       "share": 0.08
+      },
+      {
+       "color": "#3d3d3d",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#f1eee6",
+      "hsl": {
+       "h": 44,
+       "s": 0.28,
+       "l": 0.92
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 3,
+     "radius": "pill",
+     "height": 43,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 4,
+     "heroLabels": [
+      "HAVE A PROJECT? ↗",
+      "HAVE A PROJECT? ↗",
+      "EXPLORE OUR WORK ↓"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 5,
+     "hairlineSamples": [
+      "div.services_grid__vsBYg 850px",
+      "article.services_card__ElOsw 424px",
+      "article.services_card__ElOsw 424px",
+      "article.services_card__ElOsw 424px",
+      "article.services_card__ElOsw 424px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 4423
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 0.85
+     },
+     {
+      "type": "canvas",
+      "ratio": 0.85
+     }
+    ],
+    "nav": {
+     "links": 6,
+     "fixed": false,
+     "height": 96,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 5130,
+    "margins": {
+     "left": 64,
+     "right": 0
+    },
+    "sections": [
+     {
+      "sel": "section#hero-section.hero_hero__vlnW3",
+      "tag": "section",
+      "top": 0,
+      "height": 900,
+      "words": 47,
+      "media": 2,
+      "middle": 0,
+      "heading": {
+       "text": "WE MAKE",
+       "size": 84,
+       "tag": "h1"
+      },
+      "left": 64,
+      "right": 0,
+      "textLeft": 64,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.pin-spacer",
+      "tag": "div",
+      "top": 900,
+      "height": 3330,
+      "words": 28,
+      "media": 1,
+      "middle": 381,
+      "heading": {
+       "text": "WE",
+       "size": 112,
+       "tag": "h2"
+      },
+      "left": 101,
+      "right": 114,
+      "textLeft": 101,
+      "textRight": 114,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#services.services_section__KX_zm",
+      "tag": "section",
+      "top": 4230,
+      "height": 900,
+      "words": 69,
+      "media": 0,
+      "middle": 95,
+      "heading": {
+       "text": "OUR",
+       "size": 89,
+       "tag": "h2"
+      },
+      "left": 79,
+      "right": 112,
+      "textLeft": 79,
+      "textRight": 215,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "WE MAKE COOL STUFF.",
+      "size": 84,
+      "top": 363,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 64,
+      "n": 3
+     },
+     {
+      "x": 79,
+      "n": 3
+     },
+     {
+      "x": 544,
+      "n": 3
+     },
+     {
+      "x": 101,
+      "n": 2
+     },
+     {
+      "x": 969,
+      "n": 2
+     },
+     {
+      "x": 914,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 14,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.04,
+    "voidBox": {
+     "x": 0,
+     "y": 120,
+     "w": 60,
+     "h": 780
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.06,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 19,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 19,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 5855,
+     "screens": 5.7,
+     "words": 133,
+     "img": 1,
+     "video": 0,
+     "canvas": 6,
+     "svg": 5,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "WE MAKE COOL STUFF.",
+     "words": 4,
+     "chars": 19,
+     "lines": 2,
+     "size": 48,
+     "vw": 6.3,
+     "font": "Instrument Serif",
+     "weight": 400,
+     "tracking": -0.02,
+     "leading": 0.93,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.36,
+     "top": 447,
+     "mixedFonts": [
+      "Instrument Serif",
+      "Instrument Serif italic"
+     ],
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "WE MAKE COOL STUFF.",
+     "words": 4,
+     "lines": 2,
+     "size": 48,
+     "font": "Instrument Serif"
+    },
+    "headings": [
+     {
+      "text": "WE MAKE COOL STUFF.",
+      "words": 4,
+      "chars": 19,
+      "lines": 2,
+      "size": 48,
+      "vw": 6.3,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 0.93,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 447,
+      "mixedFonts": [
+       "Instrument Serif",
+       "Instrument Serif italic"
+      ],
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "WE IMAGINE",
+      "words": 2,
+      "chars": 10,
+      "lines": 2,
+      "size": 64,
+      "vw": 8.3,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 0.83,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.45,
+      "top": 1578,
+      "mixedFonts": [
+       "Instrument Serif",
+       "Instrument Serif italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "OUR SERVICES",
+      "words": 2,
+      "chars": 12,
+      "lines": 2,
+      "size": 64,
+      "vw": 8.3,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 0.82,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 4982,
+      "mixedFonts": [
+       "Instrument Serif",
+       "Instrument Serif italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 3,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 3
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Instrument Sans",
+       "share": 0.78,
+       "mono": false
+      },
+      {
+       "family": "Space Mono",
+       "share": 0.12,
+       "mono": false
+      },
+      {
+       "family": "Instrument Serif",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      7,
+      8,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      23,
+      48,
+      64
+     ],
+     "sizeCount": 13,
+     "notLoaded": [],
+     "body": {
+      "font": "Instrument Sans",
+      "size": 16.8,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": null
+     },
+     "measureChars": 35,
+     "max": {
+      "size": 64,
+      "vw": 8.3,
+      "font": "Instrument Serif",
+      "text": "WE"
+     },
+     "monoShare": 0.12,
+     "monoProseShare": 0.12,
+     "monoFamilies": [
+      "Space Mono"
+     ],
+     "monoSamples": [
+      "01",
+      "INDEPENDENT CREATIVE TECHNOLOGY STUDIO",
+      "WEB / AI / DIGITAL PRODUCTS / MOTION",
+      "01 — 04",
+      "What we do",
+      "01"
+     ],
+     "microLabels": 4,
+     "microLabelShare": 0.106,
+     "microSamples": [
+      "01",
+      "INDEPENDENT CREATIVE TECHNOLOGY STUDIO",
+      "WEB / AI / DIGITAL PRODUCTS / MOTION",
+      "What we do"
+     ],
+     "upperShare": 0.33,
+     "centerShare": 0,
+     "smallText": 6
+    },
+    "eyebrows": [
+     {
+      "text": "01",
+      "above": "WE MAKE COOL STUFF.",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": false,
+      "size": 9.6,
+      "top": 412
+     },
+     {
+      "text": "What we do",
+      "above": "OUR SERVICES",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": false,
+      "size": 10.9,
+      "top": 4925
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 9.6,
+      "top": 412
+     },
+     {
+      "text": "01 — 04",
+      "size": 8.3,
+      "top": 981
+     },
+     {
+      "text": "01",
+      "size": 10.6,
+      "top": 5180
+     },
+     {
+      "text": "02",
+      "size": 10.6,
+      "top": 5180
+     },
+     {
+      "text": "03",
+      "size": 10.6,
+      "top": 5484
+     },
+     {
+      "text": "04",
+      "size": 10.6,
+      "top": 5484
+     }
+    ],
+    "color": {
+     "bodyBg": "#000000",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#000000",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      },
+      {
+       "color": "#050505",
+       "top": 1024,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.02
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#b7b5af",
+       "share": 0.29
+      },
+      {
+       "color": "#c4c2bc",
+       "share": 0.23
+      },
+      {
+       "color": "#f1eee6",
+       "share": 0.2
+      },
+      {
+       "color": "#888888",
+       "share": 0.08
+      },
+      {
+       "color": "#3d3d3d",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#f1eee6",
+      "hsl": {
+       "h": 44,
+       "s": 0.28,
+       "l": 0.92
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 3,
+     "radius": "pill",
+     "height": 43,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 4,
+     "heroLabels": [
+      "HAVE A PROJECT? ↗",
+      "HAVE A PROJECT? ↗",
+      "EXPLORE OUR WORK ↓"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 5,
+     "hairlineSamples": [
+      "div.services_grid__vsBYg 684px",
+      "article.services_card__ElOsw 341px",
+      "article.services_card__ElOsw 341px",
+      "article.services_card__ElOsw 341px",
+      "article.services_card__ElOsw 341px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 5152
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "canvas",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 78,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 5855,
+    "margins": {
+     "left": 20,
+     "right": 52
+    },
+    "sections": [
+     {
+      "sel": "section#hero-section.hero_hero__vlnW3",
+      "tag": "section",
+      "top": 0,
+      "height": 1024,
+      "words": 40,
+      "media": 2,
+      "middle": 134,
+      "heading": {
+       "text": "WE MAKE",
+       "size": 48,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 35,
+      "textLeft": 20,
+      "textRight": 35,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.pin-spacer",
+      "tag": "div",
+      "top": 1024,
+      "height": 3789,
+      "words": 28,
+      "media": 1,
+      "middle": 136,
+      "heading": {
+       "text": "WE",
+       "size": 64,
+       "tag": "h2"
+      },
+      "left": 46,
+      "right": 77,
+      "textLeft": 46,
+      "textRight": 77,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#services.services_section__KX_zm",
+      "tag": "section",
+      "top": 4813,
+      "height": 1042,
+      "words": 69,
+      "media": 0,
+      "middle": 42,
+      "heading": {
+       "text": "OUR",
+       "size": 64,
+       "tag": "h2"
+      },
+      "left": 42,
+      "right": 62,
+      "textLeft": 42,
+      "textRight": 69,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "WE MAKE COOL STUFF.",
+      "size": 48,
+      "top": 447,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 42,
+      "n": 4
+     },
+     {
+      "x": 20,
+      "n": 3
+     },
+     {
+      "x": 65,
+      "n": 3
+     },
+     {
+      "x": 406,
+      "n": 2
+     },
+     {
+      "x": 429,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 14,
+    "bodySize": 15,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.24,
+    1,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 15,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 15,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 3463,
+     "screens": 4.1,
+     "words": 171,
+     "img": 1,
+     "video": 0,
+     "canvas": 6,
+     "svg": 5,
+     "sections": 3,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "WE MAKE COOL STUFF.",
+     "words": 4,
+     "chars": 19,
+     "lines": 2,
+     "size": 46.8,
+     "vw": 12,
+     "font": "Instrument Serif",
+     "weight": 400,
+     "tracking": -0.02,
+     "leading": 0.92,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.7,
+     "top": 323,
+     "mixedFonts": [
+      "Instrument Serif",
+      "Instrument Serif italic"
+     ],
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "WE MAKE COOL STUFF.",
+     "words": 4,
+     "lines": 2,
+     "size": 46.8,
+     "font": "Instrument Serif"
+    },
+    "headings": [
+     {
+      "text": "WE MAKE COOL STUFF.",
+      "words": 4,
+      "chars": 19,
+      "lines": 2,
+      "size": 46.8,
+      "vw": 12,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": -0.02,
+      "leading": 0.92,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.7,
+      "top": 323,
+      "mixedFonts": [
+       "Instrument Serif",
+       "Instrument Serif italic"
+      ],
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "WE IMAGINE",
+      "words": 2,
+      "chars": 10,
+      "lines": 2,
+      "size": 57.6,
+      "vw": 14.8,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 0.83,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 940,
+      "mixedFonts": [
+       "Instrument Serif",
+       "Instrument Serif italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Every project starts with an obsession.",
+      "words": 6,
+      "chars": 39,
+      "lines": 2,
+      "size": 23.2,
+      "vw": 5.9,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 1159,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "WE CREATE",
+      "words": 2,
+      "chars": 9,
+      "lines": 2,
+      "size": 57.6,
+      "vw": 14.8,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 0.83,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 1278,
+      "mixedFonts": [
+       "Instrument Serif",
+       "Instrument Serif italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Make the idea impossible to ignore.",
+      "words": 6,
+      "chars": 35,
+      "lines": 1,
+      "size": 23.2,
+      "vw": 5.9,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 1497,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "WE LAUNCH",
+      "words": 2,
+      "chars": 9,
+      "lines": 2,
+      "size": 57.6,
+      "vw": 14.8,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 0.83,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 1589,
+      "mixedFonts": [
+       "Instrument Serif",
+       "Instrument Serif italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Built with intention. Ready to make an impact.",
+      "words": 8,
+      "chars": 46,
+      "lines": 2,
+      "size": 23.2,
+      "vw": 5.9,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 1780,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "OUR SERVICES",
+      "words": 2,
+      "chars": 12,
+      "lines": 2,
+      "size": 58.5,
+      "vw": 15,
+      "font": "Instrument Serif",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 0.82,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.62,
+      "top": 2060,
+      "mixedFonts": [
+       "Instrument Serif",
+       "Instrument Serif italic"
+      ],
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 3,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 5
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Instrument Sans",
+       "share": 0.75,
+       "mono": false
+      },
+      {
+       "family": "Instrument Serif",
+       "share": 0.16,
+       "mono": false
+      },
+      {
+       "family": "Space Mono",
+       "share": 0.09,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      7,
+      10,
+      11,
+      13,
+      14,
+      16,
+      17,
+      18,
+      23,
+      47,
+      58,
+      59
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Instrument Sans",
+      "size": 16.8,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 11.4
+     },
+     "measureChars": 41,
+     "max": {
+      "size": 58.5,
+      "vw": 15,
+      "font": "Instrument Serif",
+      "text": "OUR"
+     },
+     "monoShare": 0.09,
+     "monoProseShare": 0.09,
+     "monoFamilies": [
+      "Space Mono"
+     ],
+     "monoSamples": [
+      "01",
+      "INDEPENDENT CREATIVE TECHNOLOGY STUDIO",
+      "WEB / AI / DIGITAL PRODUCTS / MOTION",
+      "What we do",
+      "01",
+      "02"
+     ],
+     "microLabels": 4,
+     "microLabelShare": 0.08,
+     "microSamples": [
+      "01",
+      "INDEPENDENT CREATIVE TECHNOLOGY STUDIO",
+      "WEB / AI / DIGITAL PRODUCTS / MOTION",
+      "What we do"
+     ],
+     "upperShare": 0.24,
+     "centerShare": 0,
+     "smallText": 5
+    },
+    "eyebrows": [
+     {
+      "text": "01",
+      "above": "WE MAKE COOL STUFF.",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": false,
+      "size": 9.6,
+      "top": 291
+     },
+     {
+      "text": "What we do",
+      "above": "OUR SERVICES",
+      "upper": true,
+      "tracked": true,
+      "mono": true,
+      "pill": false,
+      "size": 10.9,
+      "top": 2020
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 9.6,
+      "top": 291
+     },
+     {
+      "text": "01",
+      "size": 10.6,
+      "top": 2398
+     },
+     {
+      "text": "02",
+      "size": 10.6,
+      "top": 2654
+     },
+     {
+      "text": "03",
+      "size": 10.6,
+      "top": 2910
+     },
+     {
+      "text": "04",
+      "size": 10.6,
+      "top": 3166
+     }
+    ],
+    "color": {
+     "bodyBg": "#000000",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#000000",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      },
+      {
+       "color": "#050505",
+       "top": 844,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.02
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#c4c2bc",
+       "share": 0.35
+      },
+      {
+       "color": "#f1eee6",
+       "share": 0.24
+      },
+      {
+       "color": "#b7b5af",
+       "share": 0.22
+      },
+      {
+       "color": "#888888",
+       "share": 0.06
+      },
+      {
+       "color": "#3d3d3d",
+       "share": 0.04
+      }
+     ],
+     "button": null,
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 0,
+     "radius": "pill",
+     "height": 50,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 1,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 5,
+     "hairlineSamples": [
+      "div.services_grid__vsBYg 350px",
+      "article.services_card__ElOsw 349px",
+      "article.services_card__ElOsw 349px",
+      "article.services_card__ElOsw 349px",
+      "article.services_card__ElOsw 349px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 2367
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "canvas",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 78,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 3463,
+    "margins": {
+     "left": 20,
+     "right": 29
+    },
+    "sections": [
+     {
+      "sel": "section#hero-section.hero_hero__vlnW3",
+      "tag": "section",
+      "top": 0,
+      "height": 844,
+      "words": 34,
+      "media": 2,
+      "middle": 0,
+      "heading": {
+       "text": "WE MAKE",
+       "size": 47,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 0,
+      "textLeft": 20,
+      "textRight": -9,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.textmorph_section__kwMbs",
+      "tag": "section",
+      "top": 844,
+      "height": 1072,
+      "words": 77,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "WE",
+       "size": 58,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 29,
+      "textLeft": 24,
+      "textRight": 29,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#services.services_section__KX_zm",
+      "tag": "section",
+      "top": 1916,
+      "height": 1548,
+      "words": 69,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "OUR",
+       "size": 59,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 40,
+      "textLeft": 20,
+      "textRight": 63,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "WE MAKE COOL STUFF.",
+      "size": 47,
+      "top": 323,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 15
+     },
+     {
+      "x": 45,
+      "n": 5
+     }
+    ],
+    "leftBlocks": 20,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "mixed-font-headline",
+   "width": 1440,
+   "message": "3 headline(s) switch typeface or to italic mid-line (the \"one italic serif word\" move).",
+   "fix": "Set the whole headline in one face. Emphasis comes from the words.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "2 eyebrow/kicker label(s) above headings: \"01\" above \"WE MAKE COOL STUFF.\"; \"What we do\" above \"OUR SERVICES\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "width": 1440,
+   "message": "Monospace type outside code: Space Mono — e.g. \"01\", \"INDEPENDENT CREATIVE TECHNOLOGY STUDIO\", \"WEB / AI / DIGITAL PRODUCTS / MOTION\", \"01 — 04\"",
+   "fix": "Set it in the text face. Monospace is for literal code inside <pre>/<code> only.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "width": 1440,
+   "message": "Decorative index numbers: \"01\", \"01 — 04\", \"01\", \"02\", \"03\", \"04\"",
+   "fix": "Remove them. If order truly matters, write it into the words (\"First, …\") or use a real <ol>.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "5 tiny uppercase letter-spaced labels (e.g. \"01\", \"INDEPENDENT CREATIVE TECHNOLOGY STUDIO\", \"WEB / AI / DIGITAL PRODUCTS / MOTION\", \"SCROLL\").",
+   "fix": "Use sentence-case text at a readable size, or delete the label.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "5 thin rule(s)/divider line(s): div.services_grid__vsBYg 850px | article.services_card__ElOsw 424px | article.services_card__ElOsw 424px | article.services_card__ElOsw 424px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (button #f1eee6, text #f1eee6).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-count",
+   "width": 1440,
+   "message": "3 typefaces in use (Instrument Sans, Space Mono, Instrument Serif).",
+   "fix": "Two at most.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "14 different font sizes (7, 8, 10, 11, 13, 15, 16, 17, 19, 24, 29, 84, 89, 112).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "6 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "late-title",
+   "width": 1440,
+   "message": "The title is not readable 1.2s after the page loaded (it is at 0% opacity).",
+   "fix": "Put the headline in the HTML, painted on the first frame; the load sequence only adds arrival and is settled by 1.2s (references/motion.md, \"Load sequence in 1.2 seconds\"). No preloader, no gate, no waiting for the load event.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 64px on the left, 0px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "covered-text",
+   "width": 1440,
+   "message": "Large text lies under another element at some scroll position: \"WE MAKE\" (screen 1, 100% hidden); \"COOL STUFF.\" (screen 1, 100% hidden); \"IMAGINE\" (screen 2, 100% hidden); \"Every project starts with an obsession.\" (screen 2, 100% hidden)",
+   "fix": "Nothing may sit on top of a headline or statement. Move the picture, shorten the pinned run, or raise the text above it (z-index) and give it a ground.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "pinned-over-picture",
+   "width": 1440,
+   "message": "Pinned large text slides across pictures while the page scrolls: \"IMAGINE\" (screen 2, 100% over a picture); \"CREATE\" (screen 3, 100% over a picture); \"LAUNCH\" (screen 4, 100% over a picture)",
+   "fix": "Jurors read a pinned title crossing drawings or photographs as a collision. Keep the pictures in the column the title does not occupy, or unpin it.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "first-action",
+   "width": 390,
+   "message": "No visible button in the first phone screen.",
+   "fix": "On a phone the first screen still holds the headline, the supporting sentence and the action; move navigation into one row or a menu so it does not push them down."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/yugjain/Desktop/kaaykreat/.taste-skill/services/desktop-fold.jpg",
+   "pages": [
+    "/Users/yugjain/Desktop/kaaykreat/.taste-skill/services/desktop-page-01.jpg",
+    "/Users/yugjain/Desktop/kaaykreat/.taste-skill/services/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/yugjain/Desktop/kaaykreat/.taste-skill/services/tablet-fold.jpg",
+   "pages": [
+    "/Users/yugjain/Desktop/kaaykreat/.taste-skill/services/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/yugjain/Desktop/kaaykreat/.taste-skill/services/mobile-fold.jpg",
+   "pages": [
+    "/Users/yugjain/Desktop/kaaykreat/.taste-skill/services/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

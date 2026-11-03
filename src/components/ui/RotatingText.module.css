@@ -1,0 +1,18 @@
+.rotatingText {
+  display: grid;
+  width: max-content;
+  max-width: 100%;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.line {
+  display: block;
+  grid-area: 1 / 1;
+  white-space: nowrap;
+}
+
+.character {
+  display: inline-block;
+  white-space: pre;
+}
