@@ -2,6 +2,7 @@
 
 import Preloader from "@/components/preloader/Preloader";
 import Hero from "@/components/hero/Hero";
+import AboutSection from "@/components/about/AboutSection";
 import SmoothScroll from "@/components/smooth-scroll/SmoothScroll";
 import TextMorphSection from "@/components/textmorph/TextMorphSection";
 import ServicesSection from "@/components/services/ServicesSection";
@@ -19,6 +20,7 @@ export default function HomePage() {
         aria-label="Kaay Kreat"
       >
         <Hero />
+        <AboutSection />
         <TextMorphSection />
         <ServicesSection />
       </main>

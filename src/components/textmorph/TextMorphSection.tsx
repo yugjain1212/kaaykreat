@@ -91,7 +91,7 @@ export default function TextMorphSection() {
 
   return (
     <section ref={sectionRef} className={styles.section} aria-label="How we work">
-      <div className={styles.background} aria-hidden="true">
+      <div className={styles.background} data-morph-pattern aria-hidden="true">
         <PatternWaves
           preset="terminal"
           color="#ffffff"

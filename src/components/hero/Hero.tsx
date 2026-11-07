@@ -12,10 +12,10 @@ export default function Hero() {
     target: heroRef,
     offset: ["start start", "end start"],
   });
-  const artworkY = useTransform(scrollYProgress, [0, 1], [0, 120]);
-  const artworkScale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
-  const artworkOpacity = useTransform(scrollYProgress, [0, 0.85, 1], [1, 0.72, 0.38]);
-  const contentY = useTransform(scrollYProgress, [0, 1], [0, -56]);
+  const artworkY = useTransform(scrollYProgress, [0, 1], [0, 180]);
+  const artworkScale = useTransform(scrollYProgress, [0, 1], [1, 1.14]);
+  const artworkOpacity = useTransform(scrollYProgress, [0, 0.82, 1], [1, 0.68, 0.28]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, -88]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.82, 1], [1, 0.5, 0]);
 
   // Entrance animation — stagger text elements in after preloader
@@ -103,7 +103,13 @@ export default function Hero() {
           {["WORK", "SERVICES", "ABOUT", "CONTACT"].map((label) => (
             <li key={label}>
               <a
-                href={label === "SERVICES" ? "#services" : `/${label.toLowerCase()}`}
+                href={
+                  label === "SERVICES"
+                    ? "#services"
+                    : label === "ABOUT"
+                      ? "#about"
+                      : `/${label.toLowerCase()}`
+                }
                 className={styles.navLink}
               >
                 {label}

@@ -12,7 +12,21 @@ export default function SmoothScroll() {
       respectReducedMotion: true,
     });
 
-    return () => lenis.destroy();
+    const handleScrollLock = (event: Event) => {
+      if ((event as CustomEvent<boolean>).detail) {
+        lenis.stop();
+      } else {
+        lenis.start();
+      }
+    };
+
+    window.addEventListener("kaay:scroll-lock", handleScrollLock);
+
+    return () => {
+      window.removeEventListener("kaay:scroll-lock", handleScrollLock);
+      lenis.start();
+      lenis.destroy();
+    };
   }, []);
 
   return null;

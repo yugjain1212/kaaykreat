@@ -1,0 +1,42 @@
+.section {
+  position: relative;
+  min-height: 100svh;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 20;
+  inset: 0 0 auto;
+  height: 100svh;
+  overflow: hidden;
+  background: #050505;
+  transform-origin: center;
+  will-change: opacity, filter, transform;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.grain {
+  position: absolute;
+  inset: -12%;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 12% 22%, rgb(255 255 255 / 86%) 0 1px, transparent 1.7px),
+    radial-gradient(circle at 72% 18%, rgb(255 255 255 / 72%) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 35% 76%, rgb(255 255 255 / 80%) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 84% 67%, rgb(255 255 255 / 68%) 0 1px, transparent 1.6px);
+  background-size: 11px 13px, 17px 19px, 23px 29px, 31px 37px;
+  mix-blend-mode: screen;
+  opacity: 0.06;
+  will-change: opacity, transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay {
+    display: none;
+  }
+}
