@@ -139,4 +139,10 @@
     position: static;
     transform: none;
   }
+
+  /* Skip the zoom-in entry — content should be at full scale immediately */
+  .content {
+    scale: 1 !important;
+    opacity: 1 !important;
+  }
 }

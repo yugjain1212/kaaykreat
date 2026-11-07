@@ -36,7 +36,11 @@ function Media({ src, className }: { src: string; className: string }) {
 /*  – parallax entry: section slides up from below while the hero      */
 /*    stays pinned, giving a "paper pushing up" feel                   */
 /* ------------------------------------------------------------------ */
-export default function AboutSection() {
+type AboutSectionProps = {
+  transitionManaged?: boolean;
+};
+
+export default function AboutSection({ transitionManaged = false }: AboutSectionProps) {
   const sectionRef   = useRef<HTMLElement>(null);
   const parallaxRef  = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -63,6 +67,7 @@ export default function AboutSection() {
     const section  = sectionRef.current;
     const inner    = parallaxRef.current;
     if (!section || !inner) return;
+    if (transitionManaged) return;
 
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
@@ -92,7 +97,7 @@ export default function AboutSection() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [transitionManaged]);
 
   return (
     <section
@@ -109,7 +114,7 @@ export default function AboutSection() {
         ref={parallaxRef}
         className={styles.parallaxInner}
         /* start slightly translated down + invisible; JS animates on scroll */
-        style={{ transform: "translate3d(0, 60px, 0)", opacity: 0 }}
+        style={transitionManaged ? undefined : { transform: "translate3d(0, 60px, 0)", opacity: 0 }}
       >
         {/* Eyebrow */}
         <div className={styles.eyebrow}>

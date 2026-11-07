@@ -10,6 +10,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@react-three/fiber": "^8.18.0",
     "clsx": "^2.1.1",
     "gsap": "3.12.5",

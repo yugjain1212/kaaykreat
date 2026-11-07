@@ -22,12 +22,17 @@ const stages = [
   },
 ];
 
-export default function TextMorphSection() {
+type TextMorphSectionProps = {
+  transitionManaged?: boolean;
+};
+
+export default function TextMorphSection({ transitionManaged = false }: TextMorphSectionProps) {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
+    if (transitionManaged) return;
 
     let revertMotion: () => void = () => {};
     let cancelled = false;
@@ -44,40 +49,67 @@ export default function TextMorphSection() {
       revertMotion = () => media.revert();
       media.add("(min-width: 701px) and (prefers-reduced-motion: no-preference)", () => {
         const panels = gsap.utils.toArray<HTMLElement>("[data-stage]", section);
+        const content = section.querySelector<HTMLElement>(`.${styles.content}`);
         let active = 0;
 
         gsap.set(panels, { autoAlpha: 0, y: 18 });
         gsap.set(panels[0], { autoAlpha: 1, y: 0 });
         panels.forEach((panel, index) => panel.setAttribute("aria-hidden", String(index !== 0)));
 
+        // Start content scaled down for the zoom-in entry
+        if (content) {
+          gsap.set(content, { scale: 0.72, autoAlpha: 0, transformOrigin: "50% 50%" });
+        }
+
+        // Total scroll distance:
+        //   0.00 → 0.28  zoom-in entry  (content scales 0.72 → 1, fades in)
+        //   0.28 → 1.00  word cycling   (same proportions as before, shifted right)
         const timeline = gsap.timeline({
           scrollTrigger: {
             trigger: section,
             start: "top top",
-            end: () => `+=${window.innerHeight * 2.7}`,
+            end: () => `+=${window.innerHeight * 3.4}`,
             pin: true,
-            scrub: true,
+            scrub: 0.6,
             invalidateOnRefresh: true,
             onUpdate: (self) => {
-              const next = self.progress < 0.38 ? 0 : self.progress < 0.75 ? 1 : 2;
+              // Remap progress past the intro phase (0.28) into [0,1] for stage tracking
+              const morphProgress = Math.max(0, (self.progress - 0.28) / 0.72);
+              const next = morphProgress < 0.38 ? 0 : morphProgress < 0.75 ? 1 : 2;
               if (next === active) return;
               active = next;
-              panels.forEach((panel, index) => panel.setAttribute("aria-hidden", String(index !== active)));
+              panels.forEach((panel, index) =>
+                panel.setAttribute("aria-hidden", String(index !== active))
+              );
             },
           },
         });
 
+        // ── Phase 1: zoom-in entry (0 → 0.28 of total progress) ──────────
+        if (content) {
+          timeline
+            .to(content, { autoAlpha: 1, duration: 0.14, ease: "none" }, 0)
+            .to(content, { scale: 1, duration: 0.28, ease: "power2.out" }, 0);
+        }
+
+        // ── Phase 2: word cycling (starts at 0.28) ────────────────────────
+        // Original keyframes were at 0.78 and 1.78 over a 2.7vh timeline.
+        // Shifted here to start after the 0.28 intro beat on a 3.4vh timeline.
+        // New absolute positions (mapped so relative spacing is preserved):
+        //   first swap:  0.28 + 0.72 * (0.78/2.78) ≈ 0.48
+        //   second swap: 0.28 + 0.72 * (1.78/2.78) ≈ 0.74
         timeline
-          .to(panels[0], { autoAlpha: 0, y: -18, duration: 0.24 }, 0.78)
-          .fromTo(panels[1], { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: 0.24 }, 0.78)
-          .to(panels[1], { autoAlpha: 0, y: -18, duration: 0.24 }, 1.78)
-          .fromTo(panels[2], { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: 0.24 }, 1.78)
+          .to(panels[0], { autoAlpha: 0, y: -18, duration: 0.24 }, 1.00)
+          .fromTo(panels[1], { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: 0.24 }, 1.00)
+          .to(panels[1], { autoAlpha: 0, y: -18, duration: 0.24 }, 2.00)
+          .fromTo(panels[2], { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: 0.24 }, 2.00)
           .to({}, { duration: 0.76 });
 
         section.dataset.motionReady = "true";
         return () => {
           delete section.dataset.motionReady;
           panels.forEach((panel) => panel.removeAttribute("aria-hidden"));
+          if (content) gsap.set(content, { clearProps: "all" });
         };
       });
     })();
@@ -87,10 +119,16 @@ export default function TextMorphSection() {
       revertMotion();
       delete section.dataset.motionReady;
     };
-  }, []);
+  }, [transitionManaged]);
 
   return (
-    <section ref={sectionRef} className={styles.section} aria-label="How we work">
+    <section
+      ref={sectionRef}
+      className={styles.section}
+      data-text-morph
+      data-transition-managed={transitionManaged ? "true" : undefined}
+      aria-label="How we work"
+    >
       <div className={styles.background} data-morph-pattern aria-hidden="true">
         <PatternWaves
           preset="terminal"
@@ -121,7 +159,7 @@ export default function TextMorphSection() {
 
       <div className={styles.content}>
         {stages.map(({ word, body, note }) => (
-          <article key={word} data-stage className={styles.stage}>
+          <article key={word} data-stage data-text-morph-stage className={styles.stage}>
             <h2 className={styles.heading}>
               <span>WE</span>
               <span>{word}</span>
