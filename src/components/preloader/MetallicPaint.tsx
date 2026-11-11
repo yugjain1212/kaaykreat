@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useRef, type CSSProperties } from 'react';
+import { createFrameLoop } from '@/lib/frame-loop';
+import { getCanvasPixelRatio, getRenderQuality, type RenderQuality } from '@/lib/render-quality';
 
 export interface MetallicPaintProps {
   imageSrc?: string;
@@ -327,12 +329,15 @@ const isVector = async (src: string): Promise<boolean> => {
   }
 };
 
-const drawImageSource = async (src: string): Promise<HTMLCanvasElement> => {
+const drawImageSource = async (src: string, maxSide = MAX_SIDE): Promise<HTMLCanvasElement> => {
   const [image, vector] = await Promise.all([loadImage(src), isVector(src)]);
   let width = image.naturalWidth || image.width || MAX_SIDE;
   let height = image.naturalHeight || image.height || MAX_SIDE;
   const longest = Math.max(width, height);
-  const fit = vector ? MAX_SIDE / longest : clamp(1024 / longest, 1, MAX_SIDE / longest);
+  const cappedSide = Math.min(MAX_SIDE, maxSide);
+  const fit = vector
+    ? cappedSide / longest
+    : Math.min(Math.max(1, 1024 / longest), cappedSide / longest);
   width = Math.max(1, Math.round(width * fit));
   height = Math.max(1, Math.round(height * fit));
   const canvas = document.createElement('canvas');
@@ -433,10 +438,21 @@ const solvePoisson = (mask: Uint8Array, width: number, height: number) => {
   return { field, peak: peak || 1 };
 };
 
-const processShape = (source: HTMLCanvasElement): ImageData => {
-  const width = source.width;
-  const height = source.height;
-  const fit = WORKING_SIZE / Math.min(width, height);
+const processShape = (
+  source: HTMLCanvasElement,
+  maxSide = MAX_SIDE,
+  workingSize = WORKING_SIZE,
+): ImageData => {
+  const sourceScale = Math.min(1, maxSide / Math.max(source.width, source.height));
+  const width = Math.max(1, Math.round(source.width * sourceScale));
+  const height = Math.max(1, Math.round(source.height * sourceScale));
+  const normalized = document.createElement('canvas');
+  normalized.width = width;
+  normalized.height = height;
+  const normalizedCtx = normalized.getContext('2d', { willReadFrequently: true }) as CanvasRenderingContext2D;
+  normalizedCtx.drawImage(source, 0, 0, width, height);
+
+  const fit = workingSize / Math.min(width, height);
   const workW = Math.max(2, Math.round(width * fit));
   const workH = Math.max(2, Math.round(height * fit));
 
@@ -444,7 +460,7 @@ const processShape = (source: HTMLCanvasElement): ImageData => {
   small.width = workW;
   small.height = workH;
   const smallCtx = small.getContext('2d', { willReadFrequently: true }) as CanvasRenderingContext2D;
-  smallCtx.drawImage(source, 0, 0, workW, workH);
+  smallCtx.drawImage(normalized, 0, 0, workW, workH);
   const smallData = smallCtx.getImageData(0, 0, workW, workH).data;
   const mask = new Uint8Array(workW * workH);
   for (let i = 0; i < mask.length; i++) mask[i] = smallData[i * 4 + 3] > 0 ? 1 : 0;
@@ -469,7 +485,7 @@ const processShape = (source: HTMLCanvasElement): ImageData => {
   outCtx.imageSmoothingQuality = 'high';
   outCtx.drawImage(small, 0, 0, workW, workH, 0, 0, width, height);
   const result = outCtx.getImageData(0, 0, width, height);
-  const original = (source.getContext('2d', { willReadFrequently: true }) as CanvasRenderingContext2D).getImageData(
+  const original = normalizedCtx.getImageData(
     0,
     0,
     width,

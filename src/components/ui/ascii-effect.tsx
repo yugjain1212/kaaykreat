@@ -1,6 +1,8 @@
 "use client"
 
 import { cn } from "@/lib/utils"
+import { createFrameLoop } from "@/lib/frame-loop"
+import { getCanvasPixelRatio, getRenderQuality } from "@/lib/render-quality"
 import { useEffect, useRef, type HTMLAttributes, type PointerEvent } from "react"
 
 export interface AsciiEffectProps extends Omit<HTMLAttributes<HTMLDivElement>, "color"> {
@@ -119,29 +121,55 @@ export function AsciiEffect({
     const image = new Image()
     image.crossOrigin = "anonymous"
 
-    let frame = 0
     let width = 0
     let height = 0
+    let columns = 0
+    let rows = 0
+    let cellWidth = 0
+    let cellHeight = 0
     let startedAt = 0
     let nextGlitchAt = 0
     let glitchUntil = 0
     let glitchBands = new Map<number, number>()
     let loaded = false
     let fieldDirty = true
-    let sampledColumns = 0
-    let sampledRows = 0
     let pixels = new Uint8ClampedArray(0)
     let luminanceField = new Float32Array(0)
     let isVisible = true
+    const quality = getRenderQuality()
     const colorPalette = Array.from({ length: chars.length }, (_, index) =>
       gradientColor(colors, index / Math.max(1, chars.length - 1)),
     )
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    const isFlow = variant === "flow" && !reduceMotion
+    const radians = flowDirection * Math.PI / 180
+    const directionX = Math.cos(radians)
+    const directionY = Math.sin(radians)
+
+    const measureGrid = () => {
+      cellHeight = Math.max(4, fontSize * Math.max(0.5, lineHeight))
+      context.font = `${fontWeight} ${fontSize}px ${fontFamily}`
+      cellWidth = Math.max(2, context.measureText("M").width * Math.max(0.5, characterSpacing))
+      const qualityScale = Math.max(
+        1,
+        Math.sqrt((width * height) / (quality.maxAsciiCells * cellWidth * cellHeight)),
+      )
+      cellWidth *= qualityScale
+      cellHeight *= qualityScale
+      context.font = `${fontWeight} ${fontSize * qualityScale}px ${fontFamily}`
+      columns = Math.ceil(width / cellWidth) + 2
+      rows = Math.ceil(height / cellHeight) + 2
+    }
 
     const resize = () => {
       const rect = container.getBoundingClientRect()
-      const dpr = Math.min(window.devicePixelRatio || 1, 2)
+      const dpr = getCanvasPixelRatio(
+        rect.width,
+        rect.height,
+        window.devicePixelRatio || 1,
+        quality,
+      )
       width = Math.max(1, rect.width)
       height = Math.max(1, rect.height)
       fieldDirty = true
@@ -150,6 +178,7 @@ export function AsciiEffect({
       canvas.style.width = `${width}px`
       canvas.style.height = `${height}px`
       context.setTransform(dpr, 0, 0, dpr, 0, 0)
+      measureGrid()
       if (loaded) draw(performance.now())
     }
 
@@ -168,27 +197,14 @@ export function AsciiEffect({
     }
 
     const draw = (now: number) => {
-      if (!loaded || width === 0 || height === 0) return
+      if (!loaded || width === 0 || height === 0 || columns === 0 || rows === 0) return
 
-      pointer.current.x += (pointer.current.targetX - pointer.current.x) * 0.08
-      pointer.current.y += (pointer.current.targetY - pointer.current.y) * 0.08
+      if (isFlow) {
+        pointer.current.x += (pointer.current.targetX - pointer.current.x) * 0.08
+        pointer.current.y += (pointer.current.targetY - pointer.current.y) * 0.08
+      }
 
-      let cellHeight = Math.max(4, fontSize * Math.max(0.5, lineHeight))
-      context.font = `${fontWeight} ${fontSize}px ${fontFamily}`
-      let cellWidth = Math.max(2, context.measureText("M").width * Math.max(0.5, characterSpacing))
-      const maxCells = (navigator.hardwareConcurrency || 8) <= 4 ? 30000 : 56000
-      const qualityScale = Math.max(1, Math.sqrt((width * height) / (maxCells * cellWidth * cellHeight)))
-      cellWidth *= qualityScale
-      cellHeight *= qualityScale
-      context.font = `${fontWeight} ${fontSize * qualityScale}px ${fontFamily}`
-      const columns = Math.ceil(width / cellWidth) + 2
-      const rows = Math.ceil(height / cellHeight) + 2
-
-      const radians = flowDirection * Math.PI / 180
-      const directionX = Math.cos(radians)
-      const directionY = Math.sin(radians)
-
-      if (fieldDirty || sampledColumns !== columns || sampledRows !== rows) {
+      if (fieldDirty) {
         sampleCanvas.width = columns
         sampleCanvas.height = rows
 
@@ -254,8 +270,6 @@ export function AsciiEffect({
             luminanceField[index] = Math.round(clamp(luminanceField[index]!) * (steps - 1)) / (steps - 1)
           }
         }
-        sampledColumns = columns
-        sampledRows = rows
         fieldDirty = false
       }
 
@@ -269,19 +283,23 @@ export function AsciiEffect({
       context.fillStyle = backgroundColor
       context.fillRect(0, 0, width, height)
       context.textBaseline = "top"
+      const pointerActive = isFlow && pointer.current.active && mouseRadius > 0
+      const mouseRadiusSquared = mouseRadius * mouseRadius
 
       for (let row = 0; row < rows; row++) {
         const rowOffset = glitchBands.get(row) ?? 0
         for (let column = 0; column < columns; column++) {
-          const dx = column / Math.max(1, columns - 1) - 0.5
-          const dy = row / Math.max(1, rows - 1) - 0.5
-          if (Math.hypot(dx, dy) > reveal * 0.72) continue
+          if (variant === "glitch") {
+            const dx = column / Math.max(1, columns - 1) - 0.5
+            const dy = row / Math.max(1, rows - 1) - 0.5
+            if (Math.hypot(dx, dy) > reveal * 0.72) continue
+          }
 
           let sourceColumn = column
           let sourceRow = row
           let mouseInfluence = 0
 
-          if (variant === "flow" && !reduceMotion) {
+          if (isFlow) {
             const x = column * cellWidth
             const y = row * cellHeight
             const phase = (x * directionX + y * directionY) * flowFrequency + now * flowSpeed * Math.PI * 0.002
@@ -289,16 +307,23 @@ export function AsciiEffect({
             const drift = (Math.sin(phase) + Math.sin(phase * 0.61 + crossPhase) * 0.45) * flowStrength
 
             let mouseDisplacement = 0
-            if (pointer.current.active && mouseRadius > 0) {
+            if (
+              pointerActive &&
+              Math.abs(x - pointer.current.x) < mouseRadius &&
+              Math.abs(y - pointer.current.y) < mouseRadius
+            ) {
               const mouseX = x - pointer.current.x
               const mouseY = y - pointer.current.y
-              const distance = Math.hypot(mouseX, mouseY)
-              mouseInfluence = clamp(1 - distance / mouseRadius)
-              if (distance > 0 && mouseInfluence > 0) {
-                const ripple = Math.sin(distance * 0.055 - now * mouseWaveSpeed * Math.PI * 0.002)
-                mouseDisplacement = mouseInfluence ** 2 * mouseStrength * ripple
-                sourceColumn -= mouseX / distance * mouseDisplacement / cellWidth
-                sourceRow -= mouseY / distance * mouseDisplacement / cellHeight
+              const distanceSquared = mouseX * mouseX + mouseY * mouseY
+              if (distanceSquared < mouseRadiusSquared) {
+                const distance = Math.sqrt(distanceSquared)
+                mouseInfluence = clamp(1 - distance / mouseRadius)
+                if (distance > 0 && mouseInfluence > 0) {
+                  const ripple = Math.sin(distance * 0.055 - now * mouseWaveSpeed * Math.PI * 0.002)
+                  mouseDisplacement = mouseInfluence ** 2 * mouseStrength * ripple
+                  sourceColumn -= mouseX / distance * mouseDisplacement / cellWidth
+                  sourceRow -= mouseY / distance * mouseDisplacement / cellHeight
+                }
               }
             }
 
@@ -326,9 +351,16 @@ export function AsciiEffect({
       }
     }
 
-    const animate = (now: number) => {
-      draw(now)
-      if (isVisible && !reduceMotion && variant !== "image") frame = requestAnimationFrame(animate)
+    const frameLoop = createFrameLoop(
+      (now) => {
+        draw(now)
+        return isVisible && !reduceMotion && variant !== "image"
+      },
+      () => quality.frameRate,
+    )
+
+    const wake = () => {
+      if (isVisible && !reduceMotion && variant !== "image") frameLoop.wake()
     }
 
     const start = () => {
@@ -336,38 +368,43 @@ export function AsciiEffect({
       loaded = true
       startedAt = performance.now()
       resize()
-      if (isVisible && !reduceMotion && variant !== "image") frame = requestAnimationFrame(animate)
+      wake()
     }
 
     image.onload = start
     image.src = imageSrc
-    if (image.complete) start()
+    if (image.complete && image.naturalWidth > 0) start()
 
-    const observer = new ResizeObserver(resize)
-    observer.observe(container)
-    const visibility = new IntersectionObserver((entries) => {
-      isVisible = entries.some((entry) => entry.isIntersecting)
-      if (isVisible && loaded && !reduceMotion && variant !== "image" && !frame) {
-        frame = requestAnimationFrame(animate)
-      }
-      if (!isVisible && frame) {
-        cancelAnimationFrame(frame)
-        frame = 0
-      }
-    })
-    visibility.observe(container)
+    let resizeObserver: ResizeObserver | undefined
+    if (typeof ResizeObserver === "function") {
+      resizeObserver = new ResizeObserver(resize)
+      resizeObserver.observe(container)
+    } else {
+      window.addEventListener("resize", resize, { passive: true })
+    }
+
+    let visibility: IntersectionObserver | undefined
+    if (typeof IntersectionObserver === "function") {
+      visibility = new IntersectionObserver((entries) => {
+        isVisible = entries.some((entry) => entry.isIntersecting)
+        if (isVisible) wake()
+        else frameLoop.stop()
+      })
+      visibility.observe(container)
+    }
 
     return () => {
-      cancelAnimationFrame(frame)
-      observer.disconnect()
-      visibility.disconnect()
+      frameLoop.stop()
+      resizeObserver?.disconnect()
+      visibility?.disconnect()
+      window.removeEventListener("resize", resize)
       image.onload = null
     }
   }, [backgroundColor, brightnessBoost, characterSpacing, chars, colorMode, colors, contrast, dither, ditherStrength, fit, flowDirection, flowFrequency, flowSpeed, flowStrength, fontFamily, fontSize, fontWeight, glitchFrequency, glitchIntensity, imageSrc, invert, lineHeight, mouseRadius, mouseStrength, mouseWaveSpeed, posterize, revealDuration, scale, threshold, variant])
 
   const trackPointer = (event: PointerEvent<HTMLDivElement>) => {
     onPointerMove?.(event)
-    if (variant !== "flow") return
+    if (variant !== "flow" || event.pointerType === "touch") return
     const rect = event.currentTarget.getBoundingClientRect()
     const x = event.clientX - rect.left
     const y = event.clientY - rect.top

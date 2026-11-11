@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { AsciiEffect } from "@/components/ui/ascii-effect";
-import MetallicPaint from "@/components/preloader/MetallicPaint";
 import styles from "./hero.module.css";
 
 export default function Hero() {
@@ -160,23 +159,6 @@ export default function Hero() {
           mouseWaveSpeed={1.0}
           scale={1.2}
           fit="cover"
-        />
-        <MetallicPaint
-          imageSrc="/images/ascii-profile.png"
-          color="#d6d3cc"
-          backgroundColor="transparent"
-          density={1.6}
-          softness={0.34}
-          dispersion={0}
-          distortion={0.025}
-          edgeBend={0.38}
-          angle={90}
-          scale={0.833}
-          speed={0.38}
-          rotation={0}
-          mouseTilt={0.48}
-          intro
-          className={styles.metallicOverlay}
         />
       </motion.div>
 
